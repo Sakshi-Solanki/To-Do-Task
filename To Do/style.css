@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #408E91;
+    color: #443C68;
+    background-image: url("todo.jpg");
+}
+
+header{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+input, button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#ntask{
+    flex: 1 1 0%;
+    background-color: #AEC2B6;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: #635985;
+    font-size: 1.25rem;
+}
+
+#ntask::placeholder{
+    color: #635985;
+}
+
+#add{
+    color: #443C68;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-color: #AEC2B6;
+    border-radius: 1rem;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+#add:hover{
+    opacity: 0.8;
+}
+
+#add:active{
+    opacity: 0.6;
+}
+
+main{
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list{
+    padding: 1rem;
+}
+
+.task-list h2{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #443C68;
+    margin-bottom: 1rem;
+}
+
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    background-color:  #AEC2B6;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#task .task .content{
+    flex: 1 1 0%
+}
+
+#tasks .task .content .text{
+    color:#635985;
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only){
+    color: #635985;
+}
+
+#tasks .task .actions{
+    display: flex;
+    margin: -0.5rem;
+}
+
+.task .action button{
+    cursor: pointer;
+    margin: 0 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    transition: 0.4s;
+}
+
+.task .action button:hover{
+    opacity: 0.8;
+}
+
+.task .action button:active{
+    opacity: 0.6;
+}
+
+.task .action .edit{
+    color: #443C68;
+}
+
+.task .action .delete{
+    color: #443C68;
+}
